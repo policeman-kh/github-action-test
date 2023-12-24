@@ -1,11 +1,11 @@
-package sandbox.githubactiontest
+package sandbox
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class GithubActionTestApplication
+class Main1
 
 fun main(args: Array<String>) {
-	runApplication<GithubActionTestApplication>(*args)
+    runApplication<Main1>(*args)
 }
