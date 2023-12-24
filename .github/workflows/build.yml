@@ -14,6 +14,9 @@ jobs:
         with:
           distribution: microsoft
           java-version: 17
+          check-latest: true
+          cache: 'gradle'
+
       - uses: gradle/gradle-build-action@v2
         with:
-          arguments: build
+          arguments: build --no-daemon
