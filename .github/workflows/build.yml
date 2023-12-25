@@ -16,7 +16,12 @@ jobs:
       - uses: gradle/wrapper-validation-action@v1
       - uses: gradle/gradle-build-action@v2
         with:
-          arguments: build
+          arguments: build --scan
           gradle-home-cache-cleanup: true
         env:
           GRADLE_BUILD_ACTION_CACHE_DEBUG_ENABLED: true
+      - name: Upload build reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-reports
+          path: build/reports/
